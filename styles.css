@@ -1,0 +1,533 @@
+/*=======================Global styles==================================*/
+
+/*fond families*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Roboto:wght@100;300;500&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*colors*/
+    /*--achter-grond:background: rgb(72,69,228);*/
+    --achter-grond: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 100%);
+
+    --paars: #5722CD;
+    --lichtpaars: #F2F0FF;
+    --blauw: #4845E4;
+    --roze: #ED4385;
+    --zwart: #0C0C0C;
+    --grijs: #7A7A7A;
+    --lichtgrijs: #F3F6F9;
+}
+
+/*========================Typography==================================*/
+h1 {
+    font-family: 'Merriweather', serif;
+    padding: 10px;
+}
+
+h2 {
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    padding: 20px 20px 20px 0px;
+    font-weight: 300;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+h5 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 400px;
+}
+
+h6 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 300px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    color: var(--zwart);
+    font-weight: 300;
+}
+
+a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration-line: none;
+    font-weight: 400;
+    /*text-decoration-color: var(--paars);*/
+}
+
+li {
+    font-family: 'Roboto', sans-serif;
+    text-decoration-line: none;
+
+    
+    font-weight: 300;
+}
+
+/*=========================Layout==================================*/
+
+header {
+    position: relative;
+}
+
+section {
+    position: relative;
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 300px;
+    text-align: center;
+    z-index: 1;
+}
+
+a {
+    color: var(--achter-grond);
+}
+
+/* *****************************/
+/*zo als in de les uit gelecht*/
+.schuine-layout-bottom {
+    border-right: 100vw solid transparent;
+    border-top: 50px solid transparent;
+    position: absolute;
+    bottom: -1px;
+}
+
+
+.schuine-layout-top {
+    border-top: 50px solid var(--lichtpaars);
+    border-left: 100vw solid transparent;
+    position: absolute;
+    bottom: -49px;
+    z-index: 2;
+
+}
+
+.schuine-color-lichtpaars {
+    border-bottom: 50px solid var(--lichtpaars);
+}
+
+.schuine-color-grijs {
+    border-bottom: 50px solid var(--grijs);
+}
+
+/*zo als in de opdracht gevraagt wordt*/
+.skewed {
+    content: "";
+    display: block;
+    background-color: var(--achter-grond);
+    transform: skew(0deg, 2deg);
+
+    width: 100vw;
+    height: 50px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: right;
+    z-index: 1;
+}
+
+/******************************/
+
+
+.button-layout {
+    background-color: var(--roze);
+    border-radius: 100px;
+    width: 200px;
+    padding: 20px;
+    color: var(--lichtpaars);
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+}
+
+.squiggle-layout {
+    position: absolute;
+    top: 400px;
+}
+
+.input-layout {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 4px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+}
+
+.background-text {
+    position: absolute;
+    z-index: -1;
+
+    text-align: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.background-text-lichtgrijs {
+    color: var(--grijs);
+    background-color: var(--lichtgrijs);
+
+}
+
+.background-text-grijs {
+    color: var(--lichtgrijs);
+    background-color: var(--grijs);
+}
+
+
+/*4=========================Areas==================================*/
+
+/*4.1 header==============================================*/
+header {
+    background-image: var(--achter-grond);
+    color: var(--lichtpaars);
+
+    height: 500px;
+}
+
+.topnav {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.topnav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 400px;
+    list-style: none;
+}
+
+/*4.2 main==============================================*/
+main {
+
+}
+
+/*4.3 section this is how we do==============================================*/
+.this-is-how-we-do {
+    background-color: var(--lichtpaars);
+    color: var(--paars);
+    height: 600px;
+    position: relative;
+}
+
+.this-is-how-we-do h2 {
+    padding-top: 40px;
+}
+
+.this-is-how-we-do p {
+    margin-top: 100px;
+}
+
+/*4.4 section projects==============================================*/
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 1700px;
+}
+
+.projects-container article {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px;
+}
+
+.projects-img-left {
+    flex-direction: row-reverse;
+}
+
+.projects-img-richt {
+    flex-direction: row;
+}
+
+.projects-container ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-basis: 350px;
+}
+
+.projects-container p {
+    padding: 40px 0 40px 0;
+}
+
+.shadow {
+    box-shadow: 0px 16px 24px 0px rgba(0, 0, 0, 0.29);
+}
+
+.projects-container a {
+    color: var(--paars);
+}
+
+
+/*4.4.2 transition==============================================*/
+.projects-transition {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 300px;
+}
+
+.squiggle-transition {
+    height: 1px;
+    width: 10px;
+    background-color: var(--paars);
+    transition: 2s;
+}
+
+.projects-transition:hover .squiggle-transition {
+    width: 150px;
+}
+
+
+/*4.5 section work values==============================================*/
+.work-values {
+    background-color: var(--lichtpaars);
+    height: 800px;
+}
+
+.work-values article {
+    border-style: ridge;
+    border-width: 1px;
+    border-color: var(--paars);
+    background-color: var(--lichtpaars);
+
+}
+
+/*===================*/
+.work-values-grid-container {
+
+    display: grid;
+    gap: 40px 40px;
+    grid-template-columns: 350px 350px 350px;
+    grid-template-rows: 350px 350px;
+    margin-top: 300px;
+    justify-content: center;
+
+}
+
+.work-values-grid-item {
+    padding: 20px;
+}
+
+/*=====================*/
+/*.work-values-flex-container{*/
+
+/*    height: 800px;*/
+
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    flex-direction: row;*/
+/*    justify-content: space-around;*/
+/*    align-content: stretch;*/
+/*    align-items: stretch;*/
+
+/*}*/
+/*.work-values-flex-item{*/
+/* flex-basis: 350px;*/
+/*    padding: 40px;*/
+/*    margin: 40px;*/
+/*}*/
+/*=====================*/
+.work-values-grid-container .background-text {
+    top: -250px;
+}
+
+.work-values h2 {
+    color: var(--paars);
+    padding: 10px 0px 20px;
+}
+
+/*4.6 section contact form ==============================================*/
+.contact-form {
+    background-image: var(--achter-grond);
+    color: var(--lichtpaars);
+    height: 800px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    width: 800px;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*4.7footer ==============================================*/
+footer {
+    background-color: var(--zwart);
+    color: var(--lichtpaars);
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/*5=========================small screen==================================*/
+@media only screen and (max-width: 600px) {
+
+    /*========================Typography================*/
+    h1 {
+        font-size: 27px;
+        padding: 60px 0 10px 0;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    h5 {
+        font-size: 100px;
+    }
+
+    h6 {
+        font-size: 100px;
+    }
+
+    /*=========================Layout===============*/
+    .topnav {
+        justify-content: center;
+    }
+
+    .topnav ul {
+        justify-content: space-between;
+    }
+
+    .center-container {
+        padding: 0px;
+    }
+
+    /*4=========================Areas==================*/
+    /*5.1 header*/
+    header {
+    }
+
+    /*5.3 section this is how we do*/
+    .this-is-how-we-do {
+        height: 450px;
+    }
+
+    .this-is-how-we-do p {
+        margin: 50px 0px 70px 0;
+    }
+
+    /*5.4 section projects*/
+    .projects-container {
+        height: 1830px;
+    }
+
+    .projects-container article {
+        flex-direction: column;
+        justify-content: center;
+
+        margin: 20px;
+    }
+
+    .projects-container img {
+        width: 360px;
+        height: 200px;
+    }
+
+    .projects-container ul {
+        padding: 0;
+
+    }
+
+    .projects-container ul img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /*5.5 section work values*/
+    .work-values {
+        height: 1800px;
+    }
+
+    .work-values-grid-container {
+        display: grid;
+        gap: 40px;
+        grid-template-columns: 270px;
+        grid-template-rows: 270px 270px 270px 270px 270px;
+        margin: 300px 40px 200px 40px;
+        justify-content: center;
+        z-index: -1;
+    }
+
+    .work-values-grid-container .background-text {
+        top: -70px;
+
+    }
+
+    .work-values-grid-item {
+        padding: 20px;
+    }
+
+    .work-values-grid-container img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .work-values-grid-container h2 {
+        font-size: 19px;
+    }
+
+    .work-values-grid-container h6 {
+        font-size: 80px;
+    }
+
+    .work-values-grid-container p {
+        font-size: 12px;
+    }
+
+    .schuine-layout-top {
+        bottom: -270px;
+        z-index: 2;
+    }
+
+    /*5.6 section contact form*/
+    .contact-form h1 {
+        font-size: 24px;
+    }
+
+    .contact-form h3 {
+        font-size: 14px;
+        padding: 20px 0;
+    }
+
+    .contact-form form {
+        justify-content: center;
+        width: 350px;
+    }
+
+    /*footer*/
+}
